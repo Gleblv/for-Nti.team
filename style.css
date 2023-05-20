@@ -841,3 +841,188 @@ body {
         color: #292D32;
     }
 }
+
+/* ---ADVENTAGES-------------------------------------- */
+
+.adventages {
+    padding: 87px 0px 46px 0px;
+    background: #F2F2F2;
+    position: relative;
+    z-index: 1;
+}
+.adventages__container {
+}
+.adventages__header {
+    display: flex;
+    margin: 0px 0px 48px 0px;
+}
+.adventages__image {
+    margin: 0px 0px 0px -80px;
+}
+.adventages__image img {
+}
+.adventages__description {
+    padding: 96px 0px 132px 0px;
+    margin: 0px 0px 0px -80px;
+}
+.adventages__title {
+    font-size: 50px;
+    line-height: 100%;
+    color: #292D32;
+    margin: 0px 0px 37px 0px;
+}
+.adventages__text {
+    font-size: 18px;
+    line-height: 150%;
+    color: #838383;
+    margin: 0px 0px 41px 0px;
+    max-width: 518px;
+}
+.adventages__link {
+}
+.link-adventages {
+}
+.link-adventages__arrow {
+    margin: 0px 12px 0px 0px;
+}
+.link-adventages__text {
+}
+.adventages__row {
+    display: flex;
+    gap: 27px;
+}
+.adventages__column {
+}
+.column-adventages {
+    background: #292D32;
+    border-radius: 18px;
+    max-width: 330px;
+    padding: 0px 0px 35px 0px;
+}
+.column-adventages__header {
+    display: flex;
+    margin: 0px 0px 25px 0px;
+}
+.column-adventages__vector {
+    margin-left: auto;
+}
+.column-adventages__icon_background {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #343A41;
+    border-radius: 10px;
+    margin: 30px 0px 0px 30px;
+}
+.column-adventages__icon {
+}
+.column__adventages__desription {
+    margin: 0px 24px 0px 30px;
+    max-width: 278px;
+    min-width: 263px;
+}
+.column-adventages__title {
+    font-family: 'Euclid Circular A';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: calc(28 / 20 * 100%);
+    color: #FFFFFF;
+    margin: 0px 0px 13px 0px;
+}
+.column-adventages__text {
+    font-family: 'Euclid Circular A';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #B7B7B7;
+}
+.adventages__backgrd-text {
+    font-family: "Rubik One";
+    font-size: 187px;
+    line-height: 92.69%;
+    text-transform: uppercase;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0.7;
+    max-width: 879px;
+    position: absolute;
+    top: 152px;
+    left: 10px;
+    z-index: -1;
+}
+
+@media (max-width: 375.99px) {
+    .adventages {
+        padding: 101px 0px 46px 0px;
+        z-index: 1;
+    }
+    .adventages__header {
+        flex-direction: column-reverse;
+        margin: 0px 0px 179px 0px;
+        position: relative;
+    }
+    .adventages__image {
+        position: absolute;
+        top: 182px;
+        right: -61px;
+        width: 345px;
+        height: 194px;
+    }
+    .adventages__image img {
+        max-width: 100%;
+        height: auto;
+    }
+    .adventages__description {
+        margin: 0;
+        padding: 0;
+    }
+    .adventages__title {
+        font-size: 30px;
+        line-height: calc(50 / 30 * 100%);
+        margin: 0px 0px 20px 0px;
+    }
+    .adventages__text {
+        font-size: 15px;
+        line-height: 150%;
+        margin: 0px 0px 30px 0px;
+        max-width: 336px;
+    }
+    .link-adventages__arrow {
+        margin: 0px 15px 0px 0px;
+        width: 45px;
+        height: 45px;
+    }
+    .adventages__row {
+        gap: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .adventages__row > *:not(:last-child) {
+        margin: 0px 0px 20px 0px;
+    }
+    .column-adventages {
+        padding: 0px 0px 15px 0px;
+    }
+    .column-adventages__header {
+        margin: 0px 0px 15px 0px;
+    }
+    .column-adventages__icon_background {
+        width: 50px;
+        height: 50px;
+        border-radius: 9px;
+        margin: 10px 0px 0px 10px;
+    }
+    .column__adventages__desription {
+        margin: 0px 11px 0px 15px;
+    }
+    .adventages__backgrd-text {
+        font-size: 67px;
+        top: 373px;
+        left: 0px;
+        z-index: -1;
+    }
+}
