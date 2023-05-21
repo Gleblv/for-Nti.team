@@ -1,5 +1,5 @@
 
-const photo = document.querySelector('.best-items__image-for-more > img')
+const photo = document.querySelector('.best-items__image-for-more > img');
 
 if (window.innerWidth < 376) {
     photo.setAttribute('src', './images/BestItems/image 23.2.png');
