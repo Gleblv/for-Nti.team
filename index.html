@@ -10,6 +10,7 @@
 </head>
 <body>
     <div class="wrapper">
+        <div class="wrapper-for-burger-menu"></div>
         <header class="header">
             <div class="header__container">
                 <div class="header__logo">
@@ -84,11 +85,11 @@
                         <div class="best-items__title">
                             <div class="best-items__text">Новое поступление</div>
                             <div class="best-items__subtitle">Лучшие товары <br> от компании Dell</div>
-                            <div class="best-items__more">
-                                <a class="best-items__arrow">
+                            <div class="best-items__more link">
+                                <a class="best-items__arrow link__arrow">
                                     →
                                 </a>
-                                <div class="best-items__more_text">Подробнее</div>
+                                <div class="best-items__more_text link__text">Подробнее</div>
                             </div>
                         </div>
                         <div class="best-items__slider slider-bestitems">
@@ -427,27 +428,27 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="contacts__form form-contacts">
+                        <form class="contacts__form form-contacts">
                             <div class="form-contacts__header">
                                 <div class="form-contacts__title">Оставьте заявку</div>
                                 <div class="form-contacts__text">Оставьте свой номер, и мы перезвоним Вам.</div>
                             </div>
                             <div class="form-contacts__name">
                                 <label class="form-contacts__label label_name" for="name">Ваше имя</label>
-                                <input name="name" class="form-contacts__input"></input>
+                                <input name="name" class="form-contacts__input form-contacts__input_name" required minlength="3"></input>
                             </div>
                             <div class="form-contacts__tel">
                                 <label class="form-contacts__label label_tel" for="tel">Номер телефона</label>
-                                <input name="tel" class="form-contacts__input"></input>
+                                <input name="tel" class="form-contacts__input form-contacts__input_tel" required minlength="7"></input>
                             </div>
                             <div class="form-contacts__comment">
                                 <label class="form-contacts__label label_comment" for="comment">Комментарий</label>
                                 <textarea for="comment"></textarea>
                             </div>
-                            <div class="form-contacts__submitbtn">
+                            <button type="submit" class="form-contacts__submitbtn">
                                 <div class="form-contacts__arrow link__arrow">→</div>
                                 <div class="form-contacts__arrow_signature">Заказать</div>
-                            </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -459,34 +460,36 @@
                     <div class="footer__logo">
                         <img src="./images/Footer/Dell_Logo1.png" alt="Logo">
                     </div>
-                    <div class="footer__catalog catalog-footer">
-                        <div class="catalog-footer__title footer__title">Каталог</div>
-                        <ul class="catalog-footer__list footer__list">
-                            <li class="catalog-footer__item footer__item">Ноутбуки</li>
-                            <li class="catalog-footer__item footer__item">Персональные компьютеры</li>
-                            <li class="catalog-footer__item footer__item">Серверы</li>
-                            <li class="catalog-footer__item footer__item">Dell EMC</li>
-                            <li class="catalog-footer__item footer__item">Запасные части к Dell EMC</li>
-                        </ul>
-                    </div>
-                    <div class="footer__cabinet cabinet-footer">
-                        <div class="cabinet-footer__title footer__title">Личный кабинет</div>
-                        <ul class="cabinet-footer__list footer__list">
-                            <li class="cabinet-footer__item footer__item">Профиль</li>
-                            <li class="cabinet-footer__item footer__item">История заказов</li>
-                            <li class="cabinet-footer__item footer__item">SMS-уведомления</li>
-                            <li class="cabinet-footer__item footer__item">Избранное</li>
-                            <li class="cabinet-footer__item footer__item">Сравнение товаров</li>
-                        </ul>
-                    </div>
-                    <div class="footer__help help-footer">
-                        <div class="help-footer__title footer__title">Помощь</div>
-                        <ul class="help-footer__list footer__list">
-                            <li class="help-footer__item footer__item">Доставка и оплата</li>
-                            <li class="help-footer__item footer__item">Контакты</li>
-                            <li class="help-footer__item footer__item">FAQ</li>
-                            <li class="help-footer__item footer__item">Наш АСЦ</li>
-                        </ul>
+                    <div class="footer__first-block_row">
+                        <div class="footer__catalog catalog-footer">
+                            <div class="catalog-footer__title footer__title">Каталог</div>
+                            <ul class="catalog-footer__list footer__list">
+                                <li class="catalog-footer__item footer__item">Ноутбуки</li>
+                                <li class="catalog-footer__item footer__item">Персональные компьютеры</li>
+                                <li class="catalog-footer__item footer__item">Серверы</li>
+                                <li class="catalog-footer__item footer__item">Dell EMC</li>
+                                <li class="catalog-footer__item footer__item">Запасные части к Dell EMC</li>
+                            </ul>
+                        </div>
+                        <div class="footer__cabinet cabinet-footer">
+                            <div class="cabinet-footer__title footer__title">Личный кабинет</div>
+                            <ul class="cabinet-footer__list footer__list">
+                                <li class="cabinet-footer__item footer__item">Профиль</li>
+                                <li class="cabinet-footer__item footer__item">История заказов</li>
+                                <li class="cabinet-footer__item footer__item">SMS-уведомления</li>
+                                <li class="cabinet-footer__item footer__item">Избранное</li>
+                                <li class="cabinet-footer__item footer__item">Сравнение товаров</li>
+                            </ul>
+                        </div>
+                        <div class="footer__help help-footer">
+                            <div class="help-footer__title footer__title">Помощь</div>
+                            <ul class="help-footer__list footer__list">
+                                <li class="help-footer__item footer__item">Доставка и оплата</li>
+                                <li class="help-footer__item footer__item">Контакты</li>
+                                <li class="help-footer__item footer__item">FAQ</li>
+                                <li class="help-footer__item footer__item">Наш АСЦ</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="footer__contacts contacts-footer">
@@ -500,7 +503,7 @@
                     </div>
                     <div class="contacts-footer__column">
                         <div class="contacts-footer__title">E-mail</div>
-                        <div class="contacts-footer__text">dell_ru@gmail.com</div>
+                        <a href="mailto:dell_ru@gmail.com" class="contacts-footer__text">dell_ru@gmail.com</a>
                     </div>
                     <div class="contacts-footer__links">
                         <div class="contacts-footer__link">

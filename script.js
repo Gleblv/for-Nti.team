@@ -8,24 +8,30 @@ if (window.innerWidth < 376) {
 }
 
 // ---HAMBURGER-MENU----------------------
-const hambMenu = document.querySelector('.nav-header'),
-    hambMenuBtn = document.querySelector('.header__hamb-btn');
+if (window.innerWidth < 376) {
+    const hambMenu = document.querySelector('.nav-header'),
+    hambMenuBtn = document.querySelector('.header__hamb-btn'),
+    wrapper = document.querySelector('.wrapper-for-burger-menu');
 
     hambMenuBtn.addEventListener('click', () => {
-    hambMenu.classList.toggle('active');
-});
+        hambMenu.classList.toggle('active');
+        wrapper.classList.toggle('active');
+    });
+}
 
 // ---DROPDOWN-MENU-----------------------
 
-const menu = document.querySelector('.header__dropdown'),
+if (window.innerWidth > 375.99) {
+    const menu = document.querySelector('.header__dropdown'),
         menuBtn = document.querySelector('.btns-header__item_dropdown-btn');
 
-menuBtn.addEventListener('mouseover', () => {
-    menu.classList.remove('inactive');
-});
-menuBtn.addEventListener('mouseout', () => {
-    menu.classList.add('inactive');
-})
+    menuBtn.addEventListener('mouseover', () => {
+        menu.classList.remove('inactive');
+    });
+    menuBtn.addEventListener('mouseout', () => {
+        menu.classList.add('inactive');
+    })
+}
 
 // ---SLIDER-------------------------------
 
@@ -58,4 +64,29 @@ nextBtn.addEventListener('click', () => {
     slides.style.transform = `translateX(-${currentPosition}px)`;
 
     dotes[activeDoteNumber].classList.add('active');
+})
+
+// ---FORM-------------------------------------------------
+
+const submitBtn = document.querySelector('.form-contacts__submitbtn'),
+      form = document.querySelector('.form-contacts'),
+      inputName = document.querySelector('.form-contacts__input_name'),
+      inputTel = document.querySelector('.form-contacts__input_tel');
+
+const phoneNumberRegex = /^(\+\d{1,3}\s?)?(\(\d{1,4}\)|\d{1,4})[-\s]?\d{1,4}[-\s]?\d{1,9}$/;
+
+form.addEventListener('submit', (e) => {
+    if (!form.checkValidity()) {
+        e.preventDefault();
+        alert("Пожалуйста, заполните все обязательные поля.");
+        return;
+    }
+
+    if (!phoneNumberRegex.test(inputTel.value)) {
+        e.preventDefault();
+        alert("Некорректно введён номер телефона");
+        return;
+    }
+
+    alert('Данные отправлены');
 })

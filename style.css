@@ -81,6 +81,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    position: relative;
 }
 
 [class*="__container"] {
@@ -98,6 +99,10 @@ body {
 .link {
     display: flex;
     align-items: center;
+}
+
+.link:hover {
+    cursor: pointer;
 }
 
 .link__arrow {
@@ -189,14 +194,13 @@ body {
 
 .header__dropdown {
     position: absolute;
-    /* background: #000; */
     filter: drop-shadow(0px 14px 75px rgba(0, 0, 0, 0.13)) drop-shadow(0px 1.75302px 9.39116px rgba(0, 0, 0, 0.065));
     padding: 86px 0px 0px 0px;
     border-radius: 20px;
     min-width: 405px;
     left: -186px;
     top: 0px;
-    z-index: 2;
+    z-index: 4;
 }
 .header__dropdown.inactive {
     display: none;
@@ -245,6 +249,20 @@ body {
 /* ------------------------------------------------------------- */
 
 @media (max-width: 376px) {
+    .wrapper-for-burger-menu {
+        width: 100%;
+        height: 100%;
+        background: rgba(63, 63, 63, 0.5);
+        position: absolute;
+        top: 480px;
+        left: 0px;
+        z-index: 6;
+        transform: translateX(-100%);
+        transition: 0.3s;
+    }
+    .wrapper-for-burger-menu.active {
+        transform: translateX(0);
+    }
     .header {
         padding: 15px 0;
     }
@@ -298,16 +316,18 @@ body {
         top: calc(50% + 5px);
     }
     .nav-header {
-        position: fixed;
+        position: absolute;
         top: 90px;
         left: 0;
-        padding: 56px 257px 64px 38px;
+        z-index: 4;
+        padding: 56px 257px 64px 23px;
         background: #fff;
         transform: translateX(-100%);
         transition: transform 0.5s; 
     }
     .nav-header.active {
         transform: translateX(0);
+        transform: translateY(0);
     }
     .nav-header__list {
         flex-direction: column;
@@ -1405,6 +1425,11 @@ body {
     border-radius: 20px;
     height: 59.25px;
     background: none;
+    transition: 0.3s;
+    padding: 0px 0px 0px 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 100%;
 }
 .form-contacts__tel {
     display: flex;
@@ -1416,6 +1441,11 @@ body {
     border-radius: 20px;
     height: 59.25px;
     background: none;
+    transition: 0.3s;
+    padding: 0px 0px 0px 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 100%;
 }
 .form-contacts__comment {
     display: flex;
@@ -1431,6 +1461,10 @@ body {
 .form-contacts__submitbtn {
     display: flex;
     align-items: center;
+    background: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: calc(30 / 16 * 100%);
 }
 .form-contacts__submitbtn:hover {
     cursor: pointer;
@@ -1643,6 +1677,10 @@ body {
     padding: 30px 0px 0px 0px;
     margin: 0px 190px 0px 0px;
 }
+.footer__first-block_row {
+    display: flex;
+    flex-wrap: wrap;
+}
 .footer__catalog {
 }
 .catalog-footer {
@@ -1667,6 +1705,10 @@ body {
     font-size: 16px;
     line-height: 19px;
     color: #292D32;
+}
+.footer__item:hover {
+    text-decoration: underline;
+    cursor: pointer;
 }
 .footer__item:not(:last-child) {
     margin: 0px 0px 10px 0px;
@@ -1720,4 +1762,73 @@ body {
 }
 .contacts-footer__links > *:not(:last-child) {
     margin: 0px 18.29px 0px 0px;
+}
+.contacts-footer__link:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 375.99px) {
+    .footer_first-block {
+        flex-wrap: wrap;
+        padding: 30px 0px 30px 0px;
+        flex-direction: column;
+    }
+    .footer__logo {
+        flex: 0 1 70px;
+        padding: 0;
+        margin: 0 auto 28.16px auto;
+    }
+    .footer__first-block_row  {
+        flex: 0 1 100%;
+        flex-wrap: wrap;
+    }
+    .catalog-footer {
+        flex: 0 1 100%;
+        margin: 0;
+        order: 3;
+    }
+    .cabinet-footer {
+        flex: 0 1 50%;
+        margin: 0 0 30px 0;
+        order: 2;
+    }
+    .help-footer {
+        flex: 0 1 50%;
+        margin: 0;
+        order: 1;
+    }
+    .footer__title {
+        font-size: 18px;
+        line-height: calc(21 / 18 * 100%);
+    }
+    .footer__item {
+        font-size: 15px;
+        line-height: 18px;
+    }
+    .contacts-footer {
+        flex-direction: column;
+        padding: 31px 0px 29.82px 0px;
+    }
+    .contacts-footer__column {
+        margin: 0px 0px 20px 0px;
+    }
+    .contacts-footer__column:nth-child(3) {
+        margin: 0px 0px 30px 0px;
+    }
+    .contacts-footer__title {
+        font-size: 15px;
+        line-height: 133.69%;
+        margin: 0;
+    }
+    .contacts-footer__text {
+        font-size: 15px;
+        line-height: 150%;
+    }
+    .contacts-footer__links > *:not(:last-child) {
+        margin: 0px 29.82px 0px 0px;
+    }
+    .contacts-footer__link img {
+        width: 30.18px;
+        height: 30.18px;
+    }
 }
