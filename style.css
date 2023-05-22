@@ -1457,6 +1457,10 @@ body {
     border-radius: 20px;
     height: 145.25px;
     background: none;
+    padding: 10px 0px 0px 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 100%;
 }
 .form-contacts__submitbtn {
     display: flex;
